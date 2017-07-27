@@ -1,0 +1,13 @@
+App.xbf
+MainPage.xbf
+Pages\DL_card.xbf
+Pages\DL_chess.xbf
+Pages\Insciption.xbf
+Pages\Jeu.xbf
+Pages\Menu.xbf
+Pages\toto.xbf
+Style\MainPageStyle.xbf
+Views\Login.xbf
+Views\PassportRegister.xbf
+Views\UserSelection.xbf
+Views\Welcome.xbf

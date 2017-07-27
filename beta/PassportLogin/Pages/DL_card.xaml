@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="PassportLogin.Pages.DL_card"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PassportLogin.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="toto.xaml"></ResourceDictionary>    
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    
+    
+    
+    <Grid Padding="20" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-595,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <!--Page Title-->
+        <TextBlock Grid.Row="0" Style="{StaticResource AppLogo}">Client Virtual Deck : Version 0.8 (bêta)</TextBlock>
+        <TextBlock Grid.Row="1" Style="{StaticResource AppTitle}">Téléchargement jeu de carte</TextBlock>
+        <TextBlock Grid.Row="2" Style="{StaticResource AppSubTitle}">Vou êtes sur le point de proceder au téléchargement suivant :  "Jeu de carte"</TextBlock>
+
+        <!--Page Body-->
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Zip file Url:" Style="{StaticResource FieldLable}" />
+                <TextBox Grid.Row="0" Grid.Column="1" Name="ZipFileUrlTextBox" Margin="0,5,0,2" Text="https://code.msdn.microsoft.com/How-to-achieve-MVVM-design-2bb5a580/file/156796/3/How%20to%20achieve%20MVVM%20design%20patterns%20in%20UWP.zip" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Local file name:" Style="{StaticResource FieldLable}" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="FileNameField" Margin="0,2,0,0" Text="Downloaded.zip" />
+            </Grid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Style="{StaticResource ButtonContainer}">
+                <Button Name="StartDownloadButton" Click="StartDownload_Click" Style="{StaticResource OperateButton}">Démarrez</Button>
+                <Button Name="PauseAllButton" Click="PauseAll_Click" Style="{StaticResource OperateButton}">Pause </Button>
+                <Button Name="ResumeAllButton" Click="ResumeAll_Click" Style="{StaticResource OperateButton}">Reprendre</Button>
+                <Button Name="CancelAllButton" Click="CancelAll_Click" Style="{StaticResource OperateButton}">Annulez</Button>
+                <Button Name="OK" Click="OK_Click" Style="{StaticResource OperateButton}">OK</Button>
+
+            </StackPanel>
+            <TextBox Grid.Row="2" Name="OutputField" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBox>
+        </Grid>
+
+        <!--Error/Status-->
+        <TextBlock Grid.Row="4" Name="statusText" TextWrapping="Wrap" />
+
+
+    </Grid>
+</Page>

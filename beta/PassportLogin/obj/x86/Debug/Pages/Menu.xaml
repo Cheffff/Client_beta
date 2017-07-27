@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="PassportLogin.Pages.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PassportLogin.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="650" Width="735">
+
+        <SplitView x:ConnectionId='1' x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
+               CompactPaneLength="50" OpenPaneLength="150">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+                    <Button x:ConnectionId='2' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent"                              />
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='7' x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                    Width="50" Height="50" Background="Transparent"                          />
+                        <TextBlock Text="Menu" FontSize="20" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='6' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE13D;"
+                        Width="50" Height="50" Background="Transparent"                          />
+                        <TextBlock Text="Compte" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='5' x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE115;"
+                        Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Parametre" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='4' x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Content="&#xE113;"
+                        Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Favoris" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='3' x:Name="MenuButton5" FontFamily="Segoe MDL2 Assets" Content="&#xE11A;"
+                        Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Chercher" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+
+
+
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid Margin="0,0,-40,0">
+                    <TextBlock Text="SplitView Basic" FontSize="54" Foreground="White"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Image x:ConnectionId='8' x:Name="image" HorizontalAlignment="Left" Height="139" Margin="498,96,0,0" VerticalAlignment="Top" Width="127" Source="ms-appx:///Assets/2018_logo_VirtualDeck .png"/>
+                    <Button x:ConnectionId='9' x:Name="button" Content="Jeu" HorizontalAlignment="Left" Margin="310,240,0,0" VerticalAlignment="Top" Height="210" Width="315"                       />
+                    <Button x:ConnectionId='10' x:Name="button1" Content="Reglage" HorizontalAlignment="Left" Margin="115,369,0,0" VerticalAlignment="Top" Height="81" Width="190"                      />
+                    <Button x:ConnectionId='11' x:Name="Compte" Content="Compte" HorizontalAlignment="Left" Margin="115,240,0,0" VerticalAlignment="Top" Height="124" Width="190"/>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+    </Page>
+
